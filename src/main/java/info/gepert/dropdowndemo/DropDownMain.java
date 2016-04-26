@@ -12,17 +12,18 @@ package info.gepert.dropdowndemo;
 public class DropDownMain {
 
     public static void main(String[] args) {
-        SchemaSelector<SimpleSchema> simpleSchemaSelector = SchemaSelector.getSimpleSchemaSelector();
+        SchemaSelector<SimpleSchema> simpleSchemaSelector = SchemaSelectorFactory.getSimpleSchemaSelector();
         DropDownManager<SimpleSchema> managerOne = new DropDownManager<>();
         SimpleSchema schema = managerOne.select(simpleSchemaSelector);
         schema.click();
         schema.simpleSchemaAction();
 
-        SchemaSelector<ComplexSchema> complexSchemaSelector = SchemaSelector.getComplexSchemaSelector();
+        SchemaSelector<ComplexSchema> complexSchemaSelector = SchemaSelectorFactory.getComplexSchemaSelector();
         DropDownManager<ComplexSchema> managerTwo = new DropDownManager<>();
         ComplexSchema complexSchema = managerTwo.select(complexSchemaSelector);
         complexSchema.click();
         complexSchema.complexSchemaAction();
+
 
     }
 
