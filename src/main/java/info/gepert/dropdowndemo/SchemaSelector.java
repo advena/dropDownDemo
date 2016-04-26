@@ -13,6 +13,14 @@ abstract class SchemaSelector<T> {
 
     private T schema;
 
+    static SimpleSchemaSelector getSimpleSchemaSelector() {
+        return new SimpleSchemaSelector();
+    }
+
+    static ComplexSchemaSelector getComplexSchemaSelector() {
+        return new ComplexSchemaSelector();
+    }
+
     SchemaSelector(T schema) {
         this.schema = schema;
     }
